@@ -7,6 +7,9 @@
     html {
         font-family: "PT Mono", system-ui, sans-serif;
     }
+    .lexend {
+        font-family: "Lexend Variable", "PT Mono", sans-serif;
+    }
     .display-1 {
         @apply  text-6xl font-semibold;
         font-family: "Lexend Variable", "PT Mono", sans-serif;

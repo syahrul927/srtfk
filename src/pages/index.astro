@@ -13,23 +13,29 @@ import Hero from "../components/Hero.astro"
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>srtfk</title>
 	</head>
 	<body>
-		<div
-			class="sticky top-0 bg-white flex justify-center w-full border-b shadow-sm"
-		>
-			<Header />
-		</div>
+		<Header />
 		<TailwindIndicator />
 		<Layout>
 			<Hero />
 			<main class="animate-fade-up">
 				<RecentWork />
 			</main>
+			<footer class="py-16">
+				<p class="body-1 text-accent">
+					like what you’ve seen? send me an <a
+						href="mailto:srtfk.dev@gmail.com"
+						class="cursor-pointer"
+					>
+						<span class="underline">email</span>
+					</a>
+				</p>
+			</footer>
 		</Layout>
 	</body>
 </html>
