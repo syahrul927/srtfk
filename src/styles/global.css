@@ -5,7 +5,7 @@
 
 @layer base {
     html {
-        font-family: "PT Mono", system-ui, sans-serif;
+        font-family: "PT Mono", monospace, system-ui, sans-serif;
     }
     .lexend {
         font-family: "Lexend Variable", "PT Mono", sans-serif;
