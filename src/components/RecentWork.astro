@@ -1,0 +1,112 @@
+---
+import Image from "astro/components/Image.astro"
+
+const recent = [
+	{
+		image:
+			"https://images.unsplash.com/photo-1570215171323-4ec328f3f5fa?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		name: "psycology test application",
+		tags: ["nextjs", "react", "tailwindcss", "trpc"],
+		href: "/blog/psycology-test-application",
+	},
+	{
+		image:
+			"https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		name: "logistic management",
+		tags: ["nextjs", "react", "tailwindcss", "trpc"],
+		href: "/blog/logistic-management",
+	},
+	{
+		image:
+			"https://images.unsplash.com/photo-1570215171323-4ec328f3f5fa?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		name: "psycology test application",
+		tags: ["nextjs", "react", "tailwindcss", "trpc"],
+		href: "/blog/psycology-test-application",
+	},
+	{
+		image:
+			"https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		name: "logistic management",
+		tags: ["nextjs", "react", "tailwindcss", "trpc"],
+		href: "/blog/logistic-management",
+	},
+	{
+		image:
+			"https://images.unsplash.com/photo-1570215171323-4ec328f3f5fa?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		name: "psycology test application",
+		tags: ["nextjs", "react", "tailwindcss", "trpc"],
+		href: "/blog/psycology-test-application",
+	},
+	{
+		image:
+			"https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		name: "logistic management",
+		tags: ["nextjs", "react", "tailwindcss", "trpc"],
+		href: "/blog/logistic-management",
+	},
+	{
+		image:
+			"https://images.unsplash.com/photo-1570215171323-4ec328f3f5fa?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		name: "psycology test application",
+		tags: ["nextjs", "react", "tailwindcss", "trpc"],
+		href: "/blog/psycology-test-application",
+	},
+	{
+		image:
+			"https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		name: "logistic management",
+		tags: ["nextjs", "react", "tailwindcss", "trpc"],
+		href: "/blog/logistic-management",
+	},
+]
+---
+
+<div>
+	<h2>recent work -</h2>
+	<div class="grid xl:grid-cols-2 mt-12 gap-x-12 gap-y-6">
+		{
+			recent.map((work) => (
+				<a
+					class="flex-col flex gap-3 group cursor-pointer rounded-2xl "
+					href={work.href}
+				>
+					<div class="overflow-hidden rounded-xl ">
+						<Image
+							src={work.image}
+							alt={work.name}
+							inferSize
+							class="group-hover:scale-105 aspect-[3/2] group-hover:brightness-75 transition-all"
+						/>
+					</div>
+					<div class="flex justify-between w-full">
+						<h3 class="capitalize line-clamp-2">{work.name}</h3>
+						<div class="group-hover:animate-fade-right">
+							<svg
+								width="30"
+								height="30"
+								viewBox="0 0 15 15"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+									fill="currentColor"
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+								/>
+							</svg>
+						</div>
+					</div>
+
+					<div class="flex gap-2 mt-auto">
+						{work.tags.map((tag) => (
+							<div class="bg-slate-100 rounded-md px-1 py-0.5">
+								<p class="text-slate-500 text-sm ">{tag}</p>
+							</div>
+						))}
+					</div>
+				</a>
+			))
+		}
+	</div>
+</div>

@@ -1,0 +1,28 @@
+/* The integration's default injected base.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: "PT Mono", system-ui, sans-serif;
+    }
+    .display-1 {
+        @apply  text-6xl font-semibold;
+        font-family: "Lexend Variable", "PT Mono", sans-serif;
+
+    }
+    .body-1 {
+        font-family: "DM Sans Variable", "PT Mono", sans-serif;
+
+    }
+    h1 {
+        @apply text-5xl leading-tight
+    }
+    h2 {
+        @apply text-4xl leading-tight
+    }
+    h3 {
+        @apply text-3xl leading-tight
+    }
+}

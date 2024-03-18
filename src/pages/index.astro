@@ -1,0 +1,33 @@
+---
+import "../styles/global.css"
+import "@fontsource-variable/lexend"
+import "@fontsource-variable/dm-sans"
+
+import Layout from "../components/Layout.astro"
+import { TailwindIndicator } from "../components/r/tailwind-indicator"
+import Header from "../components/Header.astro"
+import RecentWork from "../components/RecentWork.astro"
+import Hero from "../components/Hero.astro"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>srtfk</title>
+	</head>
+	<body>
+		<div class="relative flex justify-center w-full border-b shadow-sm">
+			<Header />
+		</div>
+		<TailwindIndicator />
+		<Layout>
+			<Hero />
+			<main class="animate-fade-up">
+				<RecentWork />
+			</main>
+		</Layout>
+	</body>
+</html>
