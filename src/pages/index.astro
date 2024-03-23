@@ -9,6 +9,8 @@ import { TailwindIndicator } from "../components/r/tailwind-indicator"
 import Header from "../components/Header.astro"
 import RecentWork from "../components/RecentWork.astro"
 import Hero from "../components/Hero.astro"
+import Footer from "../components/Footer.astro"
+import Review from "../components/Review.astro"
 ---
 
 <html lang="en">
@@ -24,19 +26,11 @@ import Hero from "../components/Hero.astro"
 		<TailwindIndicator />
 		<Layout>
 			<Hero />
-			<main class="animate-fade-up">
+			<main class="animate-fade-up flex flex-col space-y-64">
 				<RecentWork />
+				<Review />
 			</main>
-			<footer class="py-16">
-				<p class="body-1 text-accent">
-					like what you’ve seen? send me an <a
-						href="mailto:srtfk.dev@gmail.com"
-						class="cursor-pointer"
-					>
-						<span class="underline">email</span>
-					</a>
-				</p>
-			</footer>
+			<Footer />
 		</Layout>
 	</body>
 </html>
