@@ -1,9 +1,23 @@
 ---
+import "../styles/global.css"
+import "@fontsource-variable/dm-sans"
+import "@fontsource-variable/lexend"
+import "@fontsource/pt-mono"
 
+import Header from "./Header.astro"
+import { TailwindIndicator } from "./r/tailwind-indicator"
+import Footer from "./Footer.astro"
 ---
 
-<div class="flex sm:py-16 py-8 lg:px-0 md:px-6 px-12 justify-center w-full">
-	<div class="flex flex-col gap-24 xl:max-w-screen-lg max-w-screen-md">
-		<slot />
+<div>
+	<Header />
+	<TailwindIndicator />
+	<div class="flex sm:py-16 py-8 lg:px-0 md:px-6 px-12 justify-center w-full">
+		<div
+			class="flex flex-col gap-24 xl:max-w-screen-lg max-w-screen-md animate-fade-up"
+		>
+			<slot />
+			<Footer />
+		</div>
 	</div>
 </div>

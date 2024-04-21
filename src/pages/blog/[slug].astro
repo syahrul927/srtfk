@@ -1,0 +1,66 @@
+---
+import type { GetStaticPaths } from "astro"
+import Layout from "../../components/Layout.astro"
+import { Image } from "astro:assets"
+
+const { slug } = Astro.params
+const tags = ["nextjs", "react", "tailwindcss", "trpc"]
+export const getStaticPaths = (() => {
+	return [
+		{
+			params: {
+				slug: "psycology-test-application",
+			},
+		},
+		{
+			params: {
+				slug: "logistic-management",
+			},
+		},
+	]
+}) satisfies GetStaticPaths
+---
+
+<Layout>
+	<div class="flex flex-col gap-12">
+		<div class="flex space-x-6">
+			<button class="text-slate-500">
+				<svg
+					width="20"
+					height="20"
+					viewBox="0 0 15 15"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					><path
+						d="M6.85355 3.14645C7.04882 3.34171 7.04882 3.65829 6.85355 3.85355L3.70711 7H12.5C12.7761 7 13 7.22386 13 7.5C13 7.77614 12.7761 8 12.5 8H3.70711L6.85355 11.1464C7.04882 11.3417 7.04882 11.6583 6.85355 11.8536C6.65829 12.0488 6.34171 12.0488 6.14645 11.8536L2.14645 7.85355C1.95118 7.65829 1.95118 7.34171 2.14645 7.14645L6.14645 3.14645C6.34171 2.95118 6.65829 2.95118 6.85355 3.14645Z"
+						fill="currentColor"
+						fill-rule="evenodd"
+						clip-rule="evenodd"></path></svg
+				>
+			</button>
+			<h4 class="lexend text-xl text-slate-500">April 2024</h4>
+		</div>
+		<div>
+			<h1 class="uppercase">{slug}</h1>
+			<div class="flex gap-2 mt-auto max-w-lg">
+				{
+					tags.map((tag) => (
+						<div class="px-1 py-0.5">
+							<p class="text-slate-500 text-sm">{tag}</p>
+						</div>
+					))
+				}
+			</div>
+		</div>
+
+		<div class="overflow-hidden rounded-md">
+			<Image
+				src={"https://images.unsplash.com/photo-1570215171323-4ec328f3f5fa?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+				alt={"image-works"}
+				inferSize
+				class="group-hover:scale-105 aspect-[3/2] group-hover:brightness-75 transition-all"
+			/>
+		</div>
+	</div>
+	<article>article</article>
+</Layout>

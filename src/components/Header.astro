@@ -1,4 +1,5 @@
 ---
+import Link from "../components/Link.astro"
 const menu = [
 	[
 		{
@@ -32,7 +33,7 @@ const menu = [
 ---
 
 <div
-	class="sticky top-0 bg-white z-10 flex justify-center w-full border-b shadow-sm"
+	class="sticky top-0 bg-white z-10 flex justify-center w-full border-b shadow-xs"
 >
 	<aside
 		class="sm:py-10 py-5 lg:px-0 md:px-6 px-12 xl:max-w-screen-lg max-w-screen-md w-full"
@@ -63,12 +64,7 @@ const menu = [
 				menu.map((group) => (
 					<div class="flex gap-4 last:ml-auto last:mr-4 group">
 						{group.map((menu) => (
-							<a
-								href={menu.url}
-								class="hover:text-accent group-first:first:font-semibold group-first:first:animate-pulse group-first:first:lexend transition-all hover:-translate-y-0.5 "
-							>
-								<p>{menu.label}</p>
-							</a>
+							<Link url={menu.url}>{menu.label}</Link>
 						))}
 					</div>
 				))
