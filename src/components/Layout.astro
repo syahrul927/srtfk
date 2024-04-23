@@ -9,15 +9,28 @@ import { TailwindIndicator } from "./r/tailwind-indicator"
 import Footer from "./Footer.astro"
 ---
 
-<div>
-	<Header />
-	<TailwindIndicator />
-	<div class="flex sm:py-16 py-8 lg:px-0 md:px-6 px-12 justify-center w-full">
-		<div
-			class="flex flex-col gap-24 xl:max-w-screen-lg max-w-screen-md animate-fade-up"
-		>
-			<slot />
-			<Footer />
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Syahrul Ataufik</title>
+	</head>
+	<body>
+		<div>
+			<Header />
+			<TailwindIndicator />
+			<div
+				class="flex sm:py-16 py-8 lg:px-0 md:px-6 px-12 justify-center w-full"
+			>
+				<div
+					class="flex flex-col gap-24 xl:max-w-screen-lg max-w-screen-md animate-fade-up"
+				>
+					<slot />
+					<Footer />
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
+	</body>
+</html>

@@ -5,21 +5,10 @@ import RecentWork from "../components/RecentWork.astro"
 import Review from "../components/Review.astro"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>srtfk</title>
-	</head>
-	<body>
-		<Layout>
-			<Hero />
-			<main class="animate-fade-up flex flex-col space-y-64">
-				<RecentWork />
-				<Review />
-			</main>
-		</Layout>
-	</body>
-</html>
+<Layout>
+	<Hero />
+	<main class="animate-fade-up flex flex-col space-y-64">
+		<RecentWork />
+		<Review />
+	</main>
+</Layout>
