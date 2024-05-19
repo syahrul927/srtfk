@@ -3,6 +3,7 @@ import type { GetStaticPaths } from "astro"
 import { getCollection, getEntryBySlug } from "astro:content"
 import Layout from "../../components/Layout.astro"
 import NavigationBack from "../../components/NavigationBack.astro"
+import Footer from "~/components/Footer.astro"
 
 const { slug } = Astro.params
 if (!slug) {
@@ -55,4 +56,5 @@ export const getStaticPaths = (async () => {
 	<article class="custom-prose w-full max-w-screen-lg">
 		<Content />
 	</article>
+	<Footer />
 </Layout>
