@@ -1,0 +1,45 @@
+---
+import Footer from "~/components/Footer.astro"
+import Layout from "~/components/Layout.astro"
+const history = [
+	{
+		title: "Leader Apos",
+		description: "bekerja keras hingga banting tulang tulang ayam hehehe",
+		time: "2019 - Now",
+		place: "Anteraja",
+	},
+]
+---
+
+<Layout>
+	<div class="flex flex-col space-y-3">
+		<h1>About</h1>
+		<p>
+			Experienced Software Developer adept in bringing forth expertise in
+			design, installation, testing and maintenance of software systems.
+			Equipped with a diverse and promising skill-set.
+		</p>
+		<p>
+			Proficient in various platforms, languages, and embedded systems.
+			Experienced with the latest cutting edge development tools and procedures.
+			Able to effectively self-manage during independent projects, as well as
+			collaborate as part of a productive team
+		</p>
+	</div>
+	<div>
+		<div>
+			{
+				history.map((item) => (
+					<div class="flex flex-col w-full hover:bg-slate-50 rounded-lg px-4 py-6">
+						<p>
+							{item.place} | {item.time}
+						</p>
+						<h3>{item.title}</h3>
+						<p>{item.description}</p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+	<Footer />
+</Layout>

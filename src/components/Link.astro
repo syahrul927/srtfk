@@ -1,13 +1,18 @@
 ---
+import { cn } from "~/utils/lib"
 interface Props {
 	url: string
+	className?: string
 }
-const { url } = Astro.props
+const { url, className } = Astro.props
 ---
 
 <a
 	href={url}
-	class="hover:text-accent flex gap-1 items-center group-first:first:font-semibold group-first:first:animate-pulse group-first:first:lexend transition-all hover:-translate-y-0.5"
+	class={cn(
+		"hover:text-accent flex gap-1 items-center group-first:first:font-semibold group-first:first:animate-pulse group-first:first:lexend transition-all hover:-translate-y-0.5",
+		className
+	)}
 >
 	<slot />
 </a>

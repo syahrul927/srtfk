@@ -32,7 +32,7 @@
         @apply text-xl leading-tight
     }
   .custom-prose {
-    @apply prose prose-orange prose-headings:leading-tight prose-headings:font-light prose-h3:font-light prose-h3:text-slate-500;
-    @apply lg:prose-lg xl:prose-xl;
+    @apply prose prose-orange;
+    @apply lg:prose-base xl:prose-lg prose-sm;
   }
 }
