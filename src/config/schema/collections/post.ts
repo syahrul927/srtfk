@@ -15,6 +15,12 @@ const PostCollection = collection({
 		content: fields.markdoc({
 			label: "Content",
 			description: "Write your content here",
+			options: {
+				image: {
+					directory: "public/images/article/",
+					publicPath: "/images/article/",
+				},
+			},
 			components: {
 				// ↓↓↓↓ Custom Component React Markdoc
 				// ImageLeftTextRight: TextImage,
