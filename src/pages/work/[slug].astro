@@ -34,7 +34,7 @@ export const getStaticPaths = (async () => {
 	<div class="flex flex-col gap-12">
 		<NavigationBack title={localDate(post.data.publishDate)} />
 		<div>
-			<h1 class="uppercase">{post.data.title}</h1>
+			<h1 class="capitalize">{post.data.title}</h1>
 			<div class="flex gap-2 mt-auto max-w-lg">
 				{
 					post.data.tags.map((tag: string) => (

@@ -40,7 +40,7 @@ const recent = (await getCollection("works"))
 		{
 			recent.map((work) => (
 				<a
-					class="flex-col flex gap-3 group cursor-pointer rounded-2xl "
+					class="flex-col flex gap-2 md:gap-4 group cursor-pointer rounded-2xl "
 					href={`/work/${work.slug}`}
 				>
 					<div class="overflow-hidden rounded-md border shadow-sm">
@@ -70,9 +70,9 @@ const recent = (await getCollection("works"))
 						</div>
 					</div>
 
-					<div class="flex gap-2 mt-auto">
+					<div class="flex gap-2 ">
 						{work.data.tags.map((tag: string) => (
-							<div class="px-1 py-0.5">
+							<div class="px-1 md:py-0.5">
 								<p class="text-slate-500 text-sm">{tag}</p>
 							</div>
 						))}
