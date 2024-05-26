@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content"
+import Layout from "~/components/Layout.astro"
+import WorkItem from "~/components/WorkItem.astro"
+
+const recent = (await getCollection("works")).sort(
+	(a, b) =>
+		new Date(b.data.publishDate).valueOf() -
+		new Date(a.data.publishDate).valueOf()
+)
+---
+
+<Layout>
+	<h2>all works here -</h2>
+	<div class="grid gap-3 md:grid-cols-2">
+		{
+			recent.map((work) => (
+				<WorkItem
+					slug={work.slug}
+					title={work.data.title}
+					hero={work.data.hero}
+					tags={work.data.tags}
+				/>
+			))
+		}
+	</div>
+</Layout>

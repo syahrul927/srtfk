@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content"
+import { localMonthYear } from "~/utils/lib"
+
+const experiences = await Promise.all(
+	(await getCollection("experience"))
+		.sort(
+			(a, b) =>
+				new Date(b.data.from).valueOf() - new Date(a.data.from).valueOf()
+		)
+		.map(async (item) => {
+			const { Content } = await item.render()
+			return { ...item, content: Content }
+		})
+)
+---
+
+<div>
+	<h2>Experiences</h2>
+	<div class="flex flex-col space-y-3">
+		{
+			experiences.map((item) => (
+				<div class="flex flex-col w-full hover:bg-slate-50 rounded-lg px-4 py-6">
+					<p>{item.data.place}</p>
+					<div class="inline text-wrap">
+						<span class="font-semibold lexend">{item.data.title}</span>
+						<span class="lexend text-slate-500">
+							{` | ${localMonthYear(item.data.from)} - ${
+								item.data.to.discriminant
+									? "Now"
+									: localMonthYear(item.data.to.value)
+							} `}
+						</span>
+					</div>
+					<div class="custom-prose">{<item.content />}</div>
+				</div>
+			))
+		}
+	</div>
+</div>

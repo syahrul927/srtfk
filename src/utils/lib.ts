@@ -10,3 +10,7 @@ export function localDate(date: Date) {
 	const formatted = moment(date)
 	return formatted.locale("id").format("LL")
 }
+export function localMonthYear(date: Date) {
+	const formatted = moment(date)
+	return formatted.locale("id").format("MMMM YYYY")
+}

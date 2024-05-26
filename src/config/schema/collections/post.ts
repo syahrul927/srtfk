@@ -5,6 +5,7 @@ const PostCollection = collection({
 	slugField: "title",
 	path: "src/content/works/*",
 	format: { contentField: "content" },
+	entryLayout: "content",
 	schema: {
 		title: fields.slug({ name: { label: "Title" } }),
 		hero: fields.image({
