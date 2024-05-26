@@ -15,6 +15,11 @@ const storage: LocalConfig["storage"] | GitHubConfig["storage"] =
 		  }
 const KeystaticConfig = config({
 	storage,
+	ui: {
+		brand: {
+			name: "srtfk content",
+		},
+	},
 	collections: {
 		posts: PostCollection,
 		experiences: ExperienceCollection,
