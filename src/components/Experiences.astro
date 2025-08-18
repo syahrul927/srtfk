@@ -13,6 +13,17 @@ const experiences = await Promise.all(
 			return { ...item, content: Content }
 		})
 )
+const stack = [
+	"Java",
+	"Spring Boot",
+	"Rest API",
+	"Dubbo",
+	"Zookeeper",
+	"Kafka",
+	"Redis",
+	"Postgresql",
+	"MongoDB",
+]
 ---
 
 <div>
@@ -33,6 +44,10 @@ const experiences = await Promise.all(
 						</span>
 					</div>
 					<div class="custom-prose">{<item.content />}</div>
+					<div class="mt-6 ">
+						<p>Skills:</p>
+						<p>{stack.join(", ")}</p>
+					</div>
 				</div>
 			))
 		}

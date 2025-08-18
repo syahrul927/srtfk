@@ -42,6 +42,15 @@ const ExperienceCollection = collection({
 				// ImageLeftTextRight: TextImage,
 			},
 		}),
+		skills: fields.array(
+			fields.text({
+				label: "Skills",
+			}),
+			{
+				label: "Skills",
+				itemLabel: (props) => props.value,
+			}
+		),
 	},
 })
 export default ExperienceCollection
